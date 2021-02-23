@@ -1,0 +1,9 @@
+# Project exclude paths
+/01-ioc/target/
+/02-helloSpring/target/
+/03-ioc2/target/
+/04-di/target/
+/05-autowired/target/
+/06-annotation/target/
+/07-appConfig/target/
+/09-aop/target/

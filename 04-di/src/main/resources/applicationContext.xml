@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.spring5.pojo.Address" >
+        <property name="address" value="Shanghai"/>
+    </bean>
+
+    <bean id="student" class="com.spring5.pojo.Student" >
+        <property name="name" value="angus"/>
+        <property name="address" ref="address"/>
+        <property name="books">
+            <array>
+                <value>BOOK1</value>
+                <value>BOOK2</value>
+                <value>BOOK3</value>
+            </array>
+        </property>
+        <property name="hobby">
+            <list>
+                <value>SING</value>
+                <value>DANCE</value>
+                <value>MOVIE</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="ID CARD" value="123456"/>
+                <entry key="BANK CARD" value="JUD02"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>benhuai3</value>
+                <value>naruto</value>
+                <value>onepiece</value>
+            </set>
+        </property>
+        <property name="nullProp1">
+            <null/>
+        </property>
+        <property name="nullProp2">
+            <null/>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="xuehao">21</prop>
+                <prop key="zhiwu">banzhang</prop>
+            </props>
+        </property>
+    </bean>
+
+
+<!--    <bean id="user" class="com.spring5.pojo.User">
+        <constructor-arg index="0" value="zhubin"/>
+    </bean>-->
+
+<!--    <bean id="user" class="com.spring5.pojo.User">
+        <constructor-arg type="java.lang.String" value="zhubin"/>
+    </bean>-->
+</beans>
